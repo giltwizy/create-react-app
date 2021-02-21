@@ -25,7 +25,7 @@ section {
     background-color: #161616;
 }
 
-section .circle {
+.circle {
     position: absolute;
     top: 0;
     left: 0;
@@ -159,13 +159,13 @@ header .navigation li a {
     justify-content: center;
 }
 
-.content .image-box {
+ .image-box {
     width: 500px;
     display: flex;
     justify-content: flex-end;
 }
 
-.content .image-box img {
+ .image-box img {
     max-width: 150px;
 }
 

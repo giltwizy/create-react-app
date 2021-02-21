@@ -9,10 +9,10 @@ function App() {
 }
 
 const NavBar = () => {    
-    var logoSource = "https://crdbbank.co.tz/wp-content/uploads/2020/08/crdb-logo.jpg"
+    
     return (
         <header>
-            <a href="./index.html"><img src={logoSource} alt="crdb logo" className="logo"/></a>
+            <a href="./index.html"><img src="./logo.png" alt="crdb logo" className="logo"/></a>
             <nav>
                     <ul className="navigation">
                         <li>

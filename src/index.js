@@ -10,22 +10,23 @@ import cocacola6 from './img/cocacola6.png'
 import facebookIcon from './img/facebook.png'
 import twitterIcon from './img/twitter.png'
 import instagramIcon from './img/instagram.png'
-import ScriptTag from 'react-script-tag'
 
 function App() {
     return (
         <section>
             <Circle />
             <NavBar />
-            <SwipperJs />
             <Content />
             <SocialMediaIcons />
         </section>
     );
 }
 
-const NavBar = () => {
+const Circle = () => {
+    return <div className="circle"></div>
+}
 
+const NavBar = () => {
     return (
         <header>
             <a href="./index.html"><img src="./logo.png" alt="crdb logo" className="logo" /></a>
@@ -49,28 +50,26 @@ const NavBar = () => {
     );
 }
 
-const Circle = () => {
-    return <div className="circle"></div>;
-}
-
 const Content = () => {
     return (
         <div className="content">
-            <div className="text-box">
-                <h2>Taste the feeling</h2>
-                <p>The main leading distributer of Coca-Cola softdrinks across Tanzania,managing large scale to small scale retailers across every inch so as to sastify the thirst of our beloved customers.As we are celebrating 128 years of our success we are giving our many giveaways.Stay tune with us</p>
-                <a href="https://google.com">Learn More</a>
-            </div>
-            <ImageSwipper />
+            <TextBox />
+            <ImageBox />
         </div>
     );
 }
 
-const SwipperJs = props => (
-    <ScriptTag type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js" />
-    )
+const TextBox = () => {
+    return (
+        <div className="text-box">
+            <h2>Taste the feeling</h2>
+            <p>The main leading distributer of Coca-Cola softdrinks across Tanzania,managing large scale to small scale retailers across every inch so as to sastify the thirst of our beloved customers.As we are celebrating 128 years of our success we are giving our many giveaways.Stay tune with us</p>
+            <a href="https://google.com">Learn More</a>
+        </div>
+    );
+}
 
-const ImageSwipper = () => {
+const ImageBox = () => {
     return (
         <div className="image-box">
             {/* Swiper */}
@@ -101,9 +100,9 @@ const SocialMediaIcons = () => {
                 <a href="https://twitter.com/giltwizy"><img src={twitterIcon} alt="Twitter logo" /></a>
             </li>
         </ul>
-
     );
 }
+
 
 ReactDom.render(
     <App />,

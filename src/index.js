@@ -1,6 +1,16 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/swiper.scss';
+
+// Import custom styles
 import './css/index.css'
+
+// Import image resources
 import cocacola1 from './img/cocacola1.png'
 import cocacola2 from './img/cocacola2.png'
 import cocacola3 from './img/cocacola3.png'
@@ -74,16 +84,27 @@ const ImageBox = () => {
         <div className="image-box">
             {/* Swiper */}
             <div className="swiper-container">
-                <div className="swiper-wrapper">
-                    <div className="swiper-slide"><img src={cocacola1} alt="Cocacola 1" /></div>
-                    <div className="swiper-slide"><img src={cocacola2} alt="Cocacola 2" /></div>
-                    <div className="swiper-slide"><img src={cocacola3} alt="Cocacola 3" /></div>
-                    <div className="swiper-slide"><img src={cocacola4} alt="Cocacola 4" /></div>
-                    <div className="swiper-slide"><img src={cocacola5} alt="Cocacola 5" /></div>
-                    <div className="swiper-slide"><img src={cocacola6} alt="Cocacola 6" /></div>
-                </div>
+                <SwipperContainer />
             </div>
         </div>
+    );
+}
+
+const SwipperContainer = () => {
+    return (
+        <Swiper
+            spaceBetween={50}
+            slidesPerView={3}
+            onSlideChange={() => console.log('slide change')}
+            onSwiper={(swiper) => console.log(swiper)}
+        >
+            <SwiperSlide><img src={cocacola1} alt="Cocacola 1" /></SwiperSlide>
+            <SwiperSlide><img src={cocacola2} alt="Cocacola 2" /></SwiperSlide>
+            <SwiperSlide><img src={cocacola3} alt="Cocacola 3" /></SwiperSlide>
+            <SwiperSlide><img src={cocacola4} alt="Cocacola 4" /></SwiperSlide>
+            <SwiperSlide><img src={cocacola5} alt="Cocacola 5" /></SwiperSlide>
+            <SwiperSlide><img src={cocacola6} alt="Cocacola 6" /></SwiperSlide>
+        </Swiper>
     );
 }
 

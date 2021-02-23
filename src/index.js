@@ -84,29 +84,24 @@ const ImageBox = () => {
         <div className="image-box">
             {/* Swiper */}
             <div className="swiper-container">
-                <SwipperContainer />
+                <Swiper
+                    spaceBetween={50}
+                    slidesPerView={3}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                >
+                    <SwiperSlide><img src={cocacola1} alt="Cocacola 1" /></SwiperSlide>
+                    <SwiperSlide><img src={cocacola2} alt="Cocacola 2" /></SwiperSlide>
+                    <SwiperSlide><img src={cocacola3} alt="Cocacola 3" /></SwiperSlide>
+                    <SwiperSlide><img src={cocacola4} alt="Cocacola 4" /></SwiperSlide>
+                    <SwiperSlide><img src={cocacola5} alt="Cocacola 5" /></SwiperSlide>
+                    <SwiperSlide><img src={cocacola6} alt="Cocacola 6" /></SwiperSlide>
+                </Swiper>
             </div>
         </div>
     );
 }
 
-const SwipperContainer = () => {
-    return (
-        <Swiper
-            spaceBetween={50}
-            slidesPerView={3}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
-        >
-            <SwiperSlide><img src={cocacola1} alt="Cocacola 1" /></SwiperSlide>
-            <SwiperSlide><img src={cocacola2} alt="Cocacola 2" /></SwiperSlide>
-            <SwiperSlide><img src={cocacola3} alt="Cocacola 3" /></SwiperSlide>
-            <SwiperSlide><img src={cocacola4} alt="Cocacola 4" /></SwiperSlide>
-            <SwiperSlide><img src={cocacola5} alt="Cocacola 5" /></SwiperSlide>
-            <SwiperSlide><img src={cocacola6} alt="Cocacola 6" /></SwiperSlide>
-        </Swiper>
-    );
-}
 
 const SocialMediaIcons = () => {
     return (

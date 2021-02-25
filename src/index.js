@@ -66,7 +66,7 @@ const NavBar = () => {
 const Content = () => {
     return (
         <div className="content">
-            <TextBox />
+            {/* <TextBox /> */}
             <ImageBox />
         </div>
     );

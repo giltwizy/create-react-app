@@ -1,7 +1,9 @@
 :root {
-    --circleColor: #e51e2a;
+    --circleColor: #61b15a;
     --navItemColor: #acacac;
-    --textColor: #f1f5f8;
+    --textColor: #ffffff;
+    --sectionBackgroundColor: #161616; /* #fcfcfc;  #161616 */
+    --primaryColor: #CCC;
   }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
@@ -17,11 +19,11 @@ section{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 100px;
+    padding: 80px 100px; /* initial 100px */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #161616;
+    background-color: var(--sectionBackgroundColor);
 }
 
 section .circle{
@@ -39,7 +41,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 40px 100px; /* initial 40px 100px */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +63,7 @@ header .navigation li{
 
 header .navigation li a{
     display: inline-block;
-    color: var(--navItemColor);
+    color: var(--textColor);
     font-weight: 500;
     text-decoration: none;
     margin-left: 40px;
@@ -78,7 +80,8 @@ header .navigation li a{
 .content .text-box{
     position: relative;
     max-width: 600px;
-    margin-right: 20px;    
+    margin-right: 20px;
+    margin-top: 70px;    
 }
 
 .content .text-box h2{
@@ -159,13 +162,14 @@ header .navigation li a{
   }
 
   .content .image-box{
-      width: 500px;
+      width: 1000px; /* initial 100px */
       display: flex;
       justify-content: flex-end;
   }
 
   .content .image-box img{
-      max-width: 150px;
+      max-width: 400px; /* initial 150px */
+      max-height: 300px;
   }
 
   .swiper-slide .img{

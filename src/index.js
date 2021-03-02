@@ -46,16 +46,16 @@ const NavBar = () => {
             <nav>
                 <ul className="navigation">
                     <li>
-                        <a href="https://google.com">Home</a>
+                        <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="https://google.com">Our Menu</a>
+                        <a href="#">Our Menu</a>
                     </li>
                     <li>
-                        <a href="https://google.com">Whats New?</a>
+                        <a href="#">Whats New?</a>
                     </li>
                     <li>
-                        <a href="https://google.com">Contact</a>
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -66,7 +66,8 @@ const NavBar = () => {
 const Content = () => {
     return (
         <div className="content">
-            {/* <TextBox /> */}
+            <TextBox />
+            <ColorPaletes />
             <ImageBox />
         </div>
     );
@@ -75,9 +76,9 @@ const Content = () => {
 const TextBox = () => {
     return (
         <div className="text-box">
-            <h2>Taste the feeling</h2>
-            <p>The main leading distributer of Coca-Cola softdrinks across Tanzania,managing large scale to small scale retailers across every inch so as to sastify the thirst of our beloved customers.As we are celebrating 128 years of our success we are giving our many giveaways.Stay tune with us</p>
-            <a href="https://google.com">Learn More</a>
+            <h2>Customize your debit card</h2>
+            <p>Swipe right or left</p>
+            {/* <a href="https://google.com">Learn More</a> */}
         </div>
     );
 }
@@ -109,6 +110,15 @@ const ImageBox = () => {
     );
 }
 
+const ColorPaletes = () => {
+    return(
+        <div className="colorbox-wrapper">
+            <div className="colorbox redBox "></div>
+            <div className="colorbox pinkBox"></div>
+            <div className="colorbox purpleBox"></div>
+        </div>
+    );
+}
 
 const SocialMediaIcons = () => {
     return (

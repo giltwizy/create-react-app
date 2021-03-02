@@ -78,7 +78,6 @@ const TextBox = () => {
         <div className="text-box">
             <h2>Customize your debit card</h2>
             <p>Swipe right or left</p>
-            {/* <a href="https://google.com">Learn More</a> */}
         </div>
     );
 }
@@ -110,6 +109,8 @@ const ImageBox = () => {
     );
 }
 
+
+
 const ColorPaletes = () => {
     return(
         <div className="colorbox-wrapper">
@@ -135,6 +136,8 @@ const SocialMediaIcons = () => {
         </ul>
     );
 }
+
+
 
 
 ReactDom.render(

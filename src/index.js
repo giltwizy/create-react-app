@@ -11,12 +11,15 @@ import 'swiper/swiper.scss';
 import './css/index.css'
 
 // Import image resources
-import cocacola1 from './img/cocacola1.png'
-import cocacola2 from './img/cocacola2.png'
-import cocacola3 from './img/cocacola3.png'
-import cocacola4 from './img/cocacola4.png'
-import cocacola5 from './img/cocacola5.png'
-import cocacola6 from './img/cocacola6.png'
+import chinaUnionPay from './img/China-Union-Pay.png'
+import platinumMasterCard from './img/Platinum-MasterCard.png'
+import temboCard from './img/Tembo-Card-5.png'
+import temboCardInfinite from './img/TemboCard-Infinite.png'
+import temboCardMasterCard from './img/TemboCard-MasterCard.png'
+import temboCardVisaGold from './img/TemboCard-Visa-Gold.png'
+import temboCardVisa from './img/TemboCard-Visa.png'
+import temboCardPlatinumVisa from './img/Tembocard-platinum-Visa.png'
+import cardTanapa from './img/card-tanapa.png'
 import facebookIcon from './img/facebook.png'
 import twitterIcon from './img/twitter.png'
 import instagramIcon from './img/instagram.png'
@@ -43,16 +46,16 @@ const NavBar = () => {
             <nav>
                 <ul className="navigation">
                     <li>
-                        <a href="https://google.com">Home</a>
+                        <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="https://google.com">Our Menu</a>
+                        <a href="#">Our Menu</a>
                     </li>
                     <li>
-                        <a href="https://google.com">Whats New?</a>
+                        <a href="#">Whats New?</a>
                     </li>
                     <li>
-                        <a href="https://google.com">Contact</a>
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -64,6 +67,7 @@ const Content = () => {
     return (
         <div className="content">
             <TextBox />
+            <ColorPaletes />
             <ImageBox />
         </div>
     );
@@ -72,9 +76,18 @@ const Content = () => {
 const TextBox = () => {
     return (
         <div className="text-box">
-            <h2>Taste the feeling</h2>
-            <p>The main leading distributer of Coca-Cola softdrinks across Tanzania,managing large scale to small scale retailers across every inch so as to sastify the thirst of our beloved customers.As we are celebrating 128 years of our success we are giving our many giveaways.Stay tune with us</p>
-            <a href="https://google.com">Learn More</a>
+            <h2>Customize your debit card</h2>
+            <p>Swipe right or left</p>
+        </div>
+    );
+}
+
+const ColorPaletes = () => {
+    return(
+        <div className="colorbox-wrapper">
+            <div className="colorbox redBox" ></div>
+            <div className="colorbox pinkBox"></div>
+            <div className="colorbox purpleBox"></div>
         </div>
     );
 }
@@ -86,21 +99,29 @@ const ImageBox = () => {
             <div className="swiper-container">
                 <Swiper
                     spaceBetween={50}
-                    slidesPerView={3}
+                    loop={true}
+                    slidesPerView={2}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                 >
-                    <SwiperSlide><img src={cocacola1} alt="Cocacola 1" /></SwiperSlide>
-                    <SwiperSlide><img src={cocacola2} alt="Cocacola 2" /></SwiperSlide>
-                    <SwiperSlide><img src={cocacola3} alt="Cocacola 3" /></SwiperSlide>
-                    <SwiperSlide><img src={cocacola4} alt="Cocacola 4" /></SwiperSlide>
-                    <SwiperSlide><img src={cocacola5} alt="Cocacola 5" /></SwiperSlide>
-                    <SwiperSlide><img src={cocacola6} alt="Cocacola 6" /></SwiperSlide>
+                    <SwiperSlide><img src={chinaUnionPay} alt="China Union Pay"/></SwiperSlide>
+                    <SwiperSlide><img src={platinumMasterCard} alt="Platinum Mastercard" /></SwiperSlide>
+                    <SwiperSlide><img src={temboCard} alt="Tembocard" /></SwiperSlide>                    
+                    <SwiperSlide><img src={temboCardInfinite} alt="Tembocard Infinite" /></SwiperSlide>
+                    <SwiperSlide><img src={temboCardVisaGold} alt="Tembocard Visa Gold" /></SwiperSlide>
+                    <SwiperSlide><img src={temboCardMasterCard} alt="Tembocard Mastercard" /></SwiperSlide>
+                    <SwiperSlide><img src={temboCardVisa} alt="Tembocard Visa" /></SwiperSlide>
+                    <SwiperSlide><img src={temboCardPlatinumVisa} alt="Tembocard Platinum visa" /></SwiperSlide>
+                    <SwiperSlide><img src={cardTanapa} alt="Tanapa card" /></SwiperSlide>
                 </Swiper>
             </div>
         </div>
     );
 }
+
+
+
+
 
 
 const SocialMediaIcons = () => {
@@ -118,6 +139,8 @@ const SocialMediaIcons = () => {
         </ul>
     );
 }
+
+
 
 
 ReactDom.render(

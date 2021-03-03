@@ -1,7 +1,9 @@
 :root {
-    --circleColor: #e51e2a;
+    --circleColor: #61b15a;
     --navItemColor: #acacac;
-    --textColor: #f1f5f8;
+    --textColor: #ffffff;
+    --sectionBackgroundColor: #161616; /* #fcfcfc;  #161616 */
+    --primaryColor: #CCC;
   }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
@@ -17,11 +19,12 @@ section{
     position: relative;
     width: 100%;
     min-height: 100vh;
-    padding: 100px;
+    padding: 80px 100px; /* initial 100px */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #161616;
+    background-image: url('../img/amani-hivi.jpg');
+    background-size: cover;
 }
 
 section .circle{
@@ -39,7 +42,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 40px 100px; /* initial 40px 100px */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -61,7 +64,7 @@ header .navigation li{
 
 header .navigation li a{
     display: inline-block;
-    color: var(--navItemColor);
+    color: var(--textColor);
     font-weight: 500;
     text-decoration: none;
     margin-left: 40px;
@@ -71,14 +74,19 @@ header .navigation li a{
     position: relative;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
 .content .text-box{
     position: relative;
-    max-width: 600px;
-    margin-right: 20px;    
+    max-width: 800px; /* initial 600px */
+    margin-right: 20px;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
 
 .content .text-box h2{
@@ -145,7 +153,7 @@ header .navigation li a{
 /* **********Swipper**************** */
 .swiper-container {
     width: 100%;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 50px;
   }
 
@@ -159,13 +167,14 @@ header .navigation li a{
   }
 
   .content .image-box{
-      width: 500px;
+      width: 1000px; /* initial 100px */
       display: flex;
-      justify-content: flex-end;
+      justify-content: center; /* initial flex-end */
   }
 
   .content .image-box img{
-      max-width: 150px;
+      max-width: 400px; /* initial 150px */
+      max-height: 300px;
   }
 
   .swiper-slide .img{
@@ -177,4 +186,36 @@ header .navigation li a{
   .swiper-container-3d .swiper-slide-shadow-left,
   .swiper-container-3d .swiper-slide-shadow-right{
       background-image: none;
+  }
+
+  /* Color paletes */
+  .colorbox-wrapper{
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .colorbox{
+      width: 30px;
+      height: 30px;
+      border: solid #CCC 2px;
+      margin: 10px;
+      cursor: pointer;
+  }
+
+  .colorbox:hover{
+      border: solid white 2px;
+  }
+
+  .colorbox-wrapper .redBox{      
+      background-color: red;
+  }
+  
+  .colorbox-wrapper .pinkBox{
+      background-color: pink;
+  }
+
+  .colorbox-wrapper .purpleBox{
+      background-color: purple;
   }

@@ -82,6 +82,16 @@ const TextBox = () => {
     );
 }
 
+const ColorPaletes = () => {
+    return(
+        <div className="colorbox-wrapper">
+            <div className="colorbox redBox" ></div>
+            <div className="colorbox pinkBox"></div>
+            <div className="colorbox purpleBox"></div>
+        </div>
+    );
+}
+
 const ImageBox = () => {
     return (
         <div className="image-box">
@@ -94,7 +104,7 @@ const ImageBox = () => {
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                 >
-                    <SwiperSlide><img src={chinaUnionPay} alt="China Union Pay" /></SwiperSlide>
+                    <SwiperSlide><img src={chinaUnionPay} alt="China Union Pay"/></SwiperSlide>
                     <SwiperSlide><img src={platinumMasterCard} alt="Platinum Mastercard" /></SwiperSlide>
                     <SwiperSlide><img src={temboCard} alt="Tembocard" /></SwiperSlide>                    
                     <SwiperSlide><img src={temboCardInfinite} alt="Tembocard Infinite" /></SwiperSlide>
@@ -111,15 +121,8 @@ const ImageBox = () => {
 
 
 
-const ColorPaletes = () => {
-    return(
-        <div className="colorbox-wrapper">
-            <div className="colorbox redBox "></div>
-            <div className="colorbox pinkBox"></div>
-            <div className="colorbox purpleBox"></div>
-        </div>
-    );
-}
+
+
 
 const SocialMediaIcons = () => {
     return (

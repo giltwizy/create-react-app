@@ -42,20 +42,20 @@ const Circle = () => {
 const NavBar = () => {
     return (
         <header>
-            <a href="./index.html"><img src="./logo.png" alt="crdb logo" className="logo" /></a>
+            <a href="https://crdbbank.co.tz"><img src="./logo.png" alt="crdb logo" className="logo" /></a>
             <nav>
                 <ul className="navigation">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="https://crdbbank.co.tz">Home</a>
                     </li>
                     <li>
-                        <a href="#">Our Menu</a>
+                        <a href="https://crdbbank.co.tz">Our Menu</a>
                     </li>
                     <li>
-                        <a href="#">Whats New?</a>
+                        <a href="https://crdbbank.co.tz">Whats New?</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="https://crdbbank.co.tz">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -83,7 +83,7 @@ const TextBox = () => {
 }
 
 const ColorPaletes = () => {
-    return(
+    return (
         <div className="colorbox-wrapper">
             <div className="colorbox redBox" ></div>
             <div className="colorbox pinkBox"></div>
@@ -104,9 +104,9 @@ const ImageBox = () => {
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                 >
-                    <SwiperSlide><img src={chinaUnionPay} alt="China Union Pay"/></SwiperSlide>
+                    <SwiperSlide><img src={chinaUnionPay} alt="China Union Pay" /></SwiperSlide>
                     <SwiperSlide><img src={platinumMasterCard} alt="Platinum Mastercard" /></SwiperSlide>
-                    <SwiperSlide><img src={temboCard} alt="Tembocard" /></SwiperSlide>                    
+                    <SwiperSlide><img src={temboCard} alt="Tembocard" /></SwiperSlide>
                     <SwiperSlide><img src={temboCardInfinite} alt="Tembocard Infinite" /></SwiperSlide>
                     <SwiperSlide><img src={temboCardVisaGold} alt="Tembocard Visa Gold" /></SwiperSlide>
                     <SwiperSlide><img src={temboCardMasterCard} alt="Tembocard Mastercard" /></SwiperSlide>
